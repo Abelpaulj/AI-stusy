@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, redirect, url_for, flash, request, jsonify
 from flask_login import current_user, login_required
-from app.models.models import Document, Flashcard, Quiz, QuizQuestion, QuizOption
-from app import db
-from app.routes.forms import QueryForm
-from app.utils.document_processor import query_document, generate_flashcards, generate_quiz
+from studyai_web_deployment.app.models.models import Document, Flashcard, Quiz, QuizQuestion, QuizOption
+from studyai_web_deployment.app import db
+from studyai_web_deployment.app.routes.forms import QueryForm
+from studyai_web_deployment.app.utils.document_processor import query_document, generate_flashcards, generate_quiz
 
 study = Blueprint('study', __name__)
 
