@@ -1,1 +1,2 @@
-web: gunicorn run:app
+web: gunicorn studyai_web_deployment.run:app
+
