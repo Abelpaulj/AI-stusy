@@ -3,10 +3,11 @@ from flask_login import current_user, login_required
 from werkzeug.utils import secure_filename
 import os
 import uuid
-from app.models.models import Document
-from app import db
-from app.routes.forms import UploadDocumentForm
-from app.utils.document_processor import process_document
+from studyai_web_deployment.app.models.models import Document
+from studyai_web_deployment.app import db
+from studyai_web_deployment.app.routes.forms import UploadDocumentForm
+from studyai_web_deployment.app.utils.document_processor import process_document
+
 
 main = Blueprint('main', __name__)
 
