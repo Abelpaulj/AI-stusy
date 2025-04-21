@@ -30,9 +30,10 @@ def create_app():
     login_manager.login_view = 'auth.login'
     
     # Register blueprints
-    from app.routes.main import main
-    from app.routes.auth import auth
-    from app.routes.study import study
+   from studyai_web_deployment.app.routes.main import main
+    from studyai_web_deployment.app.routes.auth import auth
+    from studyai_web_deployment.app.routes.study import study
+
     
     app.register_blueprint(main)
     app.register_blueprint(auth)
