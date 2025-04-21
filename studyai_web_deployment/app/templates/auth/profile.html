@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - StudyAI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">User Profile</h3>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <h5>Username:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="lead">{{ user.username }}</p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <h5>Email:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="lead">{{ user.email }}</p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <h5>Member Since:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="lead">{{ user.created_at.strftime('%B %d, %Y') }}</p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <h5>Documents:</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="lead">{{ user.documents.count() }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="{{ url_for('main.dashboard') }}" class="btn btn-primary">Go to Dashboard</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
