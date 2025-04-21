@@ -29,8 +29,8 @@ def create_app():
     login_manager.init_app(app)
     login_manager.login_view = 'auth.login'
     
-    # Register blueprints
-   from studyai_web_deployment.app.routes.main import main
+     # Register blueprints
+    from studyai_web_deployment.app.routes.main import main
     from studyai_web_deployment.app.routes.auth import auth
     from studyai_web_deployment.app.routes.study import study
 
